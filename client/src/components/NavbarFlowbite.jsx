@@ -36,7 +36,7 @@ export default function NavbarFlowbite() {
         {
           !loggedIn? 
           <div>
-            <Link to="/"><button className='border-2 py-2 px-4 sm:px-6 rounded-full whitespace-nowrap'>Sign Up</button></Link>
+            <Link to="/"><button className='border-2 py-2 px-4 sm:px-6 mr-4 rounded-full whitespace-nowrap'>Sign Up</button></Link>
             <Link to="/signin"><button className='border-2 py-2 px-4 sm:px-6 rounded-full whitespace-nowrap'>Sign In</button></Link></div> 
             : 
             <div><LogOut></LogOut></div>
