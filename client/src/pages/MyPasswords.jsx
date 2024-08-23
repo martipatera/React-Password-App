@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import DeleteAllBtn from '../components/deleteAllBtn'
+import DeleteAllBtn from '../components/DeleteAllBtn'
 import DeleteBtn from '../components/DeleteBtn'
 import CopyBtn from '../components/CopyBtn'
 import { useDispatch, useSelector } from 'react-redux'
