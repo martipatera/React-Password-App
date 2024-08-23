@@ -4,7 +4,7 @@ function DeleteBtn(props, index) {// posilam pres props id kazdeho hesla
 
     const fetchData = async () =>{
         try{
-            const response = await fetch(`http://localhost:3000/api/delete_data/${props.id}`,{//deletnu podle id -> backend 
+            const response = await fetch(`https://react-password-app.onrender.com/api/delete_data/${props.id}`,{//deletnu podle id -> backend 
                 method: "delete",
                 headers:{
                     "Content-Type": "application/json"

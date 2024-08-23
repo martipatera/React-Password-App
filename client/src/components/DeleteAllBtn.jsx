@@ -5,7 +5,7 @@ function DeleteAllBtn() {
 
     const deleteAll = async() =>{
         try{
-            const responseApi = await fetch("http://localhost:3000/api/delete_all",{ //fetch backend server pro vymazani vseho
+            const responseApi = await fetch("https://react-password-app.onrender.com/api/delete_all",{ //fetch backend server pro vymazani vseho
                 method: "delete", 
                 headers:{
                     "Content-Type": "application/json" //musi byt takto
@@ -18,6 +18,7 @@ function DeleteAllBtn() {
         }
         catch(err){
           console.log(err)
+
 
         }
     }

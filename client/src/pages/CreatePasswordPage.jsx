@@ -63,7 +63,7 @@ function CreatePasswordPage() {
     };
 
     const importDB = async () => {
-        const responseApi = await fetch("http://localhost:3000/api/post_passwords/", {
+        const responseApi = await fetch("https://react-password-app.onrender.com/api/post_passwords/", {
             method: "POST",
             headers: {
                 "Accept": "application/json",

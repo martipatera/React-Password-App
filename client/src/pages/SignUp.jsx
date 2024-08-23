@@ -20,7 +20,7 @@ function SignUp() {
     try{
       
       if((password === passwordConfirm) && (password.length > 7) && email.includes("@") && email.includes(".") ){
-        const response = await axios.post("http://localhost:3000/api/register", {
+        const response = await axios.post("https://react-password-app.onrender.com/api/register", {
           email,
           password
         })

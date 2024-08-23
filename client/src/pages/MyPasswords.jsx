@@ -19,7 +19,7 @@ function MyPasswords() {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/get_passwords")
+        const response = await fetch("https://react-password-app.onrender.com/api/get_passwords")
         const result = await response.json()
         await setPasswords(result)
       } catch (error) {
