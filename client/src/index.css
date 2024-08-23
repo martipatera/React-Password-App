@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#content{
+
+    background: rgb(131,58,180);
+    background: linear-gradient(135deg, rgba(131, 58, 180, 0.57) 0%, rgba(253, 29, 29, 0.816) 50%, rgba(252, 176, 69, 0.729) 100%);
+    color: white;
+    width: 100%;
+    max-width: 100%;
+    
+
+}
+#navbar{
+    background: rgb(95,91,153);
+    background: linear-gradient(135deg, rgba(95,91,153,1) 44%, rgba(209,110,110,1) 54%);
+    color: white;
+    
+}
+
+#footer{
+    background: rgb(95,91,153);
+    background: linear-gradient(-135deg, rgba(95,91,153,1) 44%, rgba(209,110,110,1) 54%);
+    color: white;
+    
+}
+    
+
+
+#content[theme = "dark"]{
+    background: rgb(67,65,84);
+    color: white;
+}
+
+#navbar[theme = "dark"]{
+    background: rgb(65,63,85);
+    background: linear-gradient(135deg, rgba(65,63,85,1) 44%, rgba(134,119,119,1) 54%);
+    color: white;
+}
+
+#footer[theme="dark"]{
+    background: rgb(65,63,85);
+    background: linear-gradient(-135deg, rgba(65,63,85,1) 44%, rgba(134,119,119,1) 54%);
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Tímto se skryje horizontální posuvník */
+  }
+  
+  
+
+
