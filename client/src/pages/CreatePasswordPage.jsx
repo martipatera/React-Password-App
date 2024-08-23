@@ -98,7 +98,7 @@ function CreatePasswordPage() {
                     </form>
                 </div>
                     : 
-                <div className='h-screen flex flex-col justify-center items-center w-full '>
+                <div className='h-screen flex flex-col gap-5 justify-center items-center w-full '>
                         <p>SignUp or SignIn to start</p><br/>
                         <Link to="/"><button className='border-2 py-2 px-4 sm:px-6 rounded-full whitespace-nowrap'>Sign Up</button></Link>
                         <Link to="/signin"><button className='border-2 py-2 px-4 sm:px-6 rounded-full whitespace-nowrap'>Sign In</button></Link>
