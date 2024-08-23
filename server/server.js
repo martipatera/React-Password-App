@@ -14,6 +14,7 @@ const connectDB = require("./connectDB/connectDB")
 
 app.use(cors({ origin: true, credentials: true }))
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 
 app.use("/api",getData),

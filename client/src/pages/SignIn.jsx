@@ -23,7 +23,12 @@ function SignIn() {
       const response = await axios.post("https://react-password-app.onrender.com/api/login",{
         email,
         password
-      })
+      },{headers: {
+        'Content-Type': 'application/json'  // Ujistěte se, že toto je nastaveno
+     }
+    }
+      
+)
       setMsg(response.data.msg)
       dispatch(logIn({email}))
       setEmail("")

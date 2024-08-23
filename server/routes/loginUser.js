@@ -2,7 +2,7 @@ const loginUser = require("express").Router();
 const UserSchema = require("../models/UserSchema");
 const { compare } = require("bcryptjs");
 
-loginUser.post("/login/", async (request, response) => {
+loginUser.post("/login", async (request, response) => {
     try {
         // Najdeme uživatele podle emailu
         const user = await UserSchema.findOne({ email: request.body.email });
