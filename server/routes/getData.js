@@ -3,7 +3,7 @@ const passwords = require("../models/Schema")//importuju moje Schema
 
 getData.get("/get_passwords/", async(request, response) => {
     try{
-        const docs = await passwords.find({})//najde to vsechny dokument
+        const docs = await passwords.find()//najde to vsechny dokument
         return response.json({msg: "Success", data: docs}).status(201)
     }
     catch(err){

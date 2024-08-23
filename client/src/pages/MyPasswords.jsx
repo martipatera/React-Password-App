@@ -13,7 +13,7 @@ function MyPasswords() {
   
   const [passwords, setPasswords] = useState({}) // State pro data 
   const {msg, data} = passwords // Destructuring data
-  const {loggedIn} = useSelector((state)=>state.login)
+  const {loggedIn, email} = useSelector((state)=>state.login)
   
 
   useEffect(() => {
@@ -37,7 +37,6 @@ function MyPasswords() {
     loggedIn? <div className='h-screen flex flex-col justify-start gap-4 w-auto'>
     {data && data.length !== 0 ? (
       <div className='flex justify-center items-center gap-10 mt-24'>
-        <DeleteAllBtn />
         <CreatePassword></CreatePassword>
       </div>
     ) : (
@@ -45,8 +44,9 @@ function MyPasswords() {
     )}
 
     {data && data.length > 0 ? ( // Pokud data existují a mají délku větší než 0
-      [...data].reverse().map((password, index) => {// [...data] vytvori novy klon data a otoci ho, puvodni data se ale nezmeni 
+      [...data].filter(p=> p.email === email).reverse().map((password, index) => {// [...data] vytvori novy klon data a otoci ho, puvodni data se ale nezmeni 
         return (
+          
           <div key={index} className='w-auto  sm:mx-10 md:mx-10 lg:mx-52 xl:mx-64 2xl:mx-96'>
             <div className={` flex items-center justify-between border-2 border-black rounded-2xl mx-auto my-0 text-black ${index % 2 === 0 ? "bg-zinc-400" : "bg-zinc-500"}`}>
               <div className='m-3 w-full'>
@@ -77,8 +77,7 @@ function MyPasswords() {
     )}
     {data && data.length !== 0 ? (
       <div className='flex justify-center items-center gap-10'>
-        <DeleteAllBtn />
-        <CreatePassword></CreatePassword>
+        
 
         
       </div>

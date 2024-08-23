@@ -6,7 +6,7 @@ postData.post("/post_passwords", async(request, response) => {
         const myPassword = new password({ //novy model
             name: request.body.name,
             password: request.body.password,
-            id: request.body.id
+            email: request.body.email
             
         })
         await myPassword.save()

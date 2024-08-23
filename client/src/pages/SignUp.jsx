@@ -11,6 +11,7 @@ function SignUp() {
   const [msg, setMsg] = useState("")
 
   const registerUser = async(e) =>{
+    
 
     e.preventDefault()
    
@@ -53,6 +54,7 @@ function SignUp() {
 
   return (
     <div>
+      
         
   <div className="flex h-screen flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
       
@@ -86,7 +88,7 @@ function SignUp() {
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                       Already have an account? <span className="font-medium text-primary-600 hover:underline dark:text-primary-500"><Link to="/signin">Login here</Link></span>
                   </p>
-                  <p>{msg}</p>
+                  <p className='text-center'>{msg}</p>
               </form>
           </div>
       </div>

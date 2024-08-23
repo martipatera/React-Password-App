@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 
 
 function CreatePasswordPage() {
-    const {loggedIn} = useSelector((state)=>state.login)
+    const {loggedIn, email} = useSelector((state)=>state.login)
 
 
     let [passwordName, setPasswordName] = useState("");
@@ -69,7 +69,7 @@ function CreatePasswordPage() {
                 "Accept": "application/json",
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ name: passwordName, password: password, id: _id})
+            body: JSON.stringify({ name: passwordName, password: password, email:email})
         });
         const data = await responseApi.json();
         console.log(data);
@@ -85,8 +85,8 @@ function CreatePasswordPage() {
                             <input className='rounded-2xl shadow-xl px-4 py-3 border placeholder-center text-black w-full' value={passwordName} onChange={(e) => setPasswordName(e.target.value)} type="text" name="password" id="password" placeholder='Enter a password name' />
                         </div>
                         <div className='flex flex-col sm:flex-row justify-center items-center mt-4 mb-4 gap-4'>
-                            <button className="text-white font-semibold px-4 py-3 border rounded-full shadow-xl bg-primary-600 hover:bg-primary-700 scale-105 transition-all active:bg-primary-500" onClick={handleSubmit}>Generate password</button>
-                            <button className="text-white font-semibold px-4 py-3 border rounded-full shadow-xl bg-primary-600 hover:bg-primary-700 scale-105 transition-all active:bg-primary-500" onClick={clearOutput}>Clear</button>
+                            <button className="text-white font-semibold px-4 py-3 border rounded-full shadow-xl  hover:bg-primary-700 scale-105 transition-all active:bg-primary-500" onClick={handleSubmit}>Generate password</button>
+                            <button className="text-white font-semibold px-4 py-3 border rounded-full shadow-xl  hover:bg-primary-700 scale-105 transition-all active:bg-primary-500" onClick={clearOutput}>Clear</button>
                         </div>
                         <div className={passwordInput === "" ? "" : "flex flex-row justify-between items-center bg-inherit border pl-10 rounded-full shadow-xl text-center"}>
                             <span>{passwordInput}</span>

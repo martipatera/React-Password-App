@@ -8,7 +8,7 @@ const password = new mongoose.Schema({ //musim si udelat Schema jak bude vypadat
         type:String,
         required:true
     },
-    id:{
+    email:{
         type:String,
         required:true
     }

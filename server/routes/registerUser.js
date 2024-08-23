@@ -18,7 +18,7 @@ registerUser.post("/register", async (request, response) => {
     }
         else{
         await newUser.save()
-        response.status(201).json({msg: "User has been created successfuly"})
+        response.status(201).json({msg: "User has been created successfuly, please sign in"})
     }
         
     }
